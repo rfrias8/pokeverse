@@ -8,9 +8,9 @@ function PokemonCard({ url, name }) {
   useEffect(() => {
     fetch(url)
     .then((res) => res.json())
-    .then((data) => {
-      setImages(data.sprites.front_default);
-      setAbilities(data.abilities);
+    .then((pokemon) => {
+      setImages(pokemon.sprites.front_default);
+      setAbilities(pokemon.abilities);
     });
   }, []);
 
