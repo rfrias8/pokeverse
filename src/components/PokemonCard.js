@@ -12,10 +12,10 @@ function PokemonCard({ url, name }) {
       setImages(pokemon.sprites.front_default);
       setAbilities(pokemon.abilities);
     });
-  }, []);
+  }, [url]);
 
-  console.log(images);
-  console.log(abilities);
+  // console.log(images);
+  // console.log(abilities);
 
 
   return (
@@ -26,7 +26,7 @@ function PokemonCard({ url, name }) {
         <Card.Text as="div">
           <ul>
             {abilities.map(pokemonAbility => 
-              <li> {pokemonAbility.ability.name}</li>
+              <li key={pokemonAbility.ability.name}> {pokemonAbility.ability.name}</li>
             )}
           </ul>
         </Card.Text>
