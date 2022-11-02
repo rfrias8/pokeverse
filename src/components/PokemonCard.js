@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card'
 
+
+
 function PokemonCard({ url, name }) {
   const [images,setImages] = useState('');
   const [abilities, setAbilities] = useState([]);
@@ -20,7 +22,7 @@ function PokemonCard({ url, name }) {
 
   return (
     
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '16rem'}}>
         <Card.Img src={images}></Card.Img>
         <Card.Title>{name}</Card.Title>
         <Card.Text as="div">
